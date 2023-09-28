@@ -1,0 +1,35 @@
+{
+  "name": "@pantelwar/js-utils",
+  "version": "1.0.0",
+  "description": "A utility package for commonly used javascript functions utilized on daily basis in Pantelwar's projects.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs",
+    "dev": "rm -rf dist && rollup --watch -c --bundleConfigAsCjs",
+    "test": "jest"
+  },
+  "author": "Pantelwar",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-typescript": "^7.23.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.4",
+    "@types/jest": "^29.5.5",
+    "@types/mime-types": "^2.1.2",
+    "date-fns": "^2.30.0",
+    "jest": "^29.7.0",
+    "mime-types": "^2.1.35",
+    "rollup": "^3.29.3",
+    "rollup-plugin-dts": "^6.0.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015", "DOM", "DOM.Iterable"],
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@tests/*": ["./tests/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}

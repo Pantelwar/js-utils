@@ -1,8 +1,26 @@
 # Pantelwar Utilities
 
+## Description
+
 This is a general purpose utility package for usage in javascript or typescript projects. All the functions here are well tested and used widely multiple times
 
 Kindly check this package before making your own utilities in the project.
+
+## Installation
+
+For yarn users: (recommended)
+
+```
+yarn add @pantelwar/js-utils
+```
+
+For npm users:
+
+```
+npm install @pantelwar/js-utils
+```
+
+## Guidelines
 
 Here are some guidelines to use some of the functions of this package.
 

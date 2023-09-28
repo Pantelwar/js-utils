@@ -1,2 +1,9 @@
+.vscode
 node_modules
 demo
+src
+tests
+babel.config.js
+rollup.config.mjs
+tsconfig.json
+README.md

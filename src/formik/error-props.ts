@@ -18,6 +18,6 @@ export function getErrorProps(formik: FormikLike, name: string): ReturnType {
   const { touched, error } = formik.getFieldMeta(name);
   return {
     error: Boolean(touched && error),
-    helperText: touched ? error || ' ' : ' ',
+    helperText: touched ? error || " " : " ",
   };
 }

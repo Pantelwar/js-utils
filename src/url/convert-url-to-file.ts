@@ -1,6 +1,7 @@
-import mime from 'mime-types';
-import { identifyExtension } from './identify-extension';
-import { identifyFilename } from './identify-filename';
+import mime from "mime-types";
+
+import { identifyExtension } from "./identify-extension";
+import { identifyFilename } from "./identify-filename";
 
 export type PreviewFile = File & { preview: string };
 
@@ -20,7 +21,7 @@ export const convertUrlToFile = async (
     const res = await fetch(url);
     const data = await res.blob();
     const file = new File([data], filename, {
-      type: mime.lookup(extension) || 'application/octet-stream',
+      type: mime.lookup(extension) || "application/octet-stream",
     });
 
     Object.assign(file, {

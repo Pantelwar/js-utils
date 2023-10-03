@@ -1,4 +1,4 @@
-import { identifyFilename } from './identify-filename';
+import { identifyFilename } from "./identify-filename";
 
 /**
  * Returns the file extension from a given URL string.
@@ -9,9 +9,9 @@ import { identifyFilename } from './identify-filename';
 export function identifyExtension(urlString: string): string {
   const filename = identifyFilename(urlString);
 
-  if (filename.includes('.')) {
-    return filename.substring(filename.lastIndexOf('.') + 1);
+  if (filename.includes(".")) {
+    return filename.substring(filename.lastIndexOf(".") + 1);
   }
 
-  return '';
+  return "";
 }

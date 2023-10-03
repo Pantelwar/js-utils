@@ -1,1 +1,1 @@
-export * from './error-props';
+export * from "./error-props";

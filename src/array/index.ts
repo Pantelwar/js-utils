@@ -1,1 +1,1 @@
-export * from './flatten-array';
+export * from "./flatten-array";

@@ -1,2 +1,2 @@
-export * from './uuidv4';
-export * from './wait';
+export * from "./uuidv4";
+export * from "./wait";

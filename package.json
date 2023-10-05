@@ -9,7 +9,10 @@
     "build": "rm -rf dist && rollup -c --bundleConfigAsCjs",
     "dev": "rm -rf dist && rollup --watch -c --bundleConfigAsCjs",
     "test": "jest",
-    "prepublish": "yarn test && yarn build"
+    "prepare": "husky install",
+    "prepublish": "yarn test && yarn build",
+    "format": "prettier .",
+    "lint": "eslint --fix ."
   },
   "author": "Pantelwar",
   "license": "MIT",

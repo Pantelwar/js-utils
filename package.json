@@ -53,6 +53,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pantelwar/js-utils.git"
+    "url": "git+https://github.com/Pantelwar/js-utils.git"
   }
 }

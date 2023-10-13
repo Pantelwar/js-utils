@@ -3,23 +3,14 @@
  * any nested arrays found.
  *
  * @param {T[]} list - The array to be flattened.
- * @param {string} [key='children'] - The key used to identify nested arrays in each item.
  * @return {T[]} - The flattened array.
  */
-export function flattenArray<T extends { [key: string]: T[] }>(
-  list: T[],
-  key: string = "children"
-): T[] {
-  let children: T[] = [];
 
-  const flatten = list?.map((item) => {
-    if (item[key] && item[key].length) {
-      children = [...children, ...item[key]];
+export function flattenArray<T = unknown>(list: T[]): T[] {
+  return list.reduce((acc, val) => {
+    if (Array.isArray(val)) {
+      return acc.concat(flattenArray(val));
     }
-    return item;
-  });
-
-  return flatten?.concat(
-    children.length ? flattenArray(children, key) : children
-  );
+    return acc.concat(val);
+  }, [] as T[]);
 }

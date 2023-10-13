@@ -1,4 +1,4 @@
-import { identifyExtension } from "../src";
+import { identifyExtension } from "../../src";
 
 describe("Identify Extension", () => {
   it("should identify extension of a url with extension", () => {

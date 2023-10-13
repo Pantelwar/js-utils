@@ -3,9 +3,8 @@ export const getGeolocation = (): Promise<
 > => {
   return new Promise((resolve) => {
     if (
-      typeof window === "undefined" &&
-      !("navigator" in window) &&
-      !("geolocation" in navigator)
+      typeof window === "undefined" ||
+      (!("navigator" in window) && !("geolocation" in navigator))
     ) {
       resolve([null, null]);
     } else {

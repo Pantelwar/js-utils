@@ -9,8 +9,10 @@
 node_modules
 src
 tests
+coverage
 babel.config.js
 rollup.config.mjs
+jest.config.js
 tsconfig.json
 LICENSE
 README.md

@@ -5,5 +5,5 @@
  * @return {string} - The converted list case string.
  */
 export function convertListcases(value: number): string {
-  return (value + 9).toString(36);
+  return ((Math.abs(value) % 26 || 26) + 9).toString(36);
 }

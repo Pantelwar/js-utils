@@ -1,6 +1,7 @@
 export function snakeCase(str: string) {
   return str
     .toLowerCase()
-    .replace(/\s+/g, "_")
-    .replace(/[^a-z0-9_]/g, "");
+    .replace(/[^a-z 0-9-]/g, "")
+    .trim()
+    .replace(/\s+/g, "_");
 }

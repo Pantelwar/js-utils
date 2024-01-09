@@ -5,10 +5,5 @@
  * @return {boolean} - True if the text contains emoji, false otherwise.
  */
 export function hasEmoji(text: string): boolean {
-  try {
-    window.btoa(text);
-    return false;
-  } catch (error) {
-    return true;
-  }
+  return /\p{Extended_Pictographic}/u.test(text);
 }

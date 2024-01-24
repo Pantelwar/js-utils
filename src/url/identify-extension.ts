@@ -5,6 +5,11 @@ import { identifyFilename } from "./identify-filename";
  *
  * @param {string} urlString - The URL string.
  * @return {string} The file extension.
+ *
+ * @example
+ * ```
+ * console.log(identifyExtension('https://example.com/image.jpg')); // 'jpg'
+ * ```
  */
 export function identifyExtension(urlString: string): string {
   const filename = identifyFilename(urlString);

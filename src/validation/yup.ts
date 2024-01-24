@@ -1,6 +1,11 @@
-import type { TestFunction } from "yup";
+/**
+ * Validates a PAN (Permanent Account Number) by checking its format and content.
+ *
+ * @param {string | undefined} value - the PAN to be validated
+ * @return {boolean} true if the PAN is valid, false otherwise
+ */
 
-export const panValidate: TestFunction<string | undefined> = (value) => {
+export const panValidate = (value: string | undefined): boolean => {
   if (!value) return false;
   if (value.length < 10 || value.length > 10) {
     return false;
@@ -27,7 +32,14 @@ export const panValidate: TestFunction<string | undefined> = (value) => {
   return true;
 };
 
-export const mobileValidate: TestFunction<string | undefined> = (value) => {
+/**
+ * Validates a mobile number by checking its format and content.
+ *
+ * @param {string | undefined} value - the mobile number to be validated
+ * @return {boolean} true if the mobile number is valid, false otherwise
+ */
+
+export const mobileValidate = (value: string | undefined): boolean => {
   if (!value) return false;
   if (value.length < 10 || value.length > 10) {
     return false;
@@ -38,7 +50,13 @@ export const mobileValidate: TestFunction<string | undefined> = (value) => {
   return true;
 };
 
-export const otpValidate: TestFunction<string | undefined> = (value) => {
+/**
+ * Validates the given value as a 6-digit one-time passcode.
+ *
+ * @param {string | undefined} value - the value to be validated
+ * @return {boolean} true if the value is a valid 6-digit passcode, false otherwise
+ */
+export const otpValidate = (value: string | undefined) => {
   if (!value) return false;
   if (value.length < 6 || value.length > 6) {
     return false;

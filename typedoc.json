@@ -1,0 +1,16 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "./src/array/index.ts",
+    "./src/dom/index.ts",
+    "./src/file/index.ts",
+    "./src/form-data/index.ts",
+    "./src/formik/index.ts",
+    "./src/general/index.ts",
+    "./src/object/index.ts",
+    "./src/string/index.ts",
+    "./src/url/index.ts",
+    "./src/validation/index.ts"
+  ],
+  "out": "docs"
+}

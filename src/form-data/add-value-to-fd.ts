@@ -1,4 +1,4 @@
-export type Value =
+type Value =
   | string
   | number
   | boolean
@@ -8,6 +8,21 @@ export type Value =
   | undefined
   | { [key: string]: Value };
 
+/**
+ * Adds a value to a FormData object, handling different value types appropriately.
+ *
+ * @param {FormData} formData - the FormData object to which the value will be added
+ * @param {string} key - the key under which the value will be stored in the FormData object
+ * @param {Value} value - the value to be added to the FormData object
+ *
+ * @example
+ * ```
+ * addValueToFD(formData, 'string', 'value');
+ * addValueToFD(formData, 'array', ['value1', 'value2']);
+ * addValueToFD(formData, 'obj', { key: 'test' });
+ * addValueToFD(formData, 'file', file);
+ * ```
+ */
 export function addValueToFD(formData: FormData, key: string, value: Value) {
   if (value === undefined || value === null) {
     return;

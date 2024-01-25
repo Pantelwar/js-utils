@@ -3,7 +3,7 @@ name: Generate and Deploy Docs
 on:
   push:
     branches:
-      - feat/typedoc
+      - main
 
 jobs:
   generate_docs:

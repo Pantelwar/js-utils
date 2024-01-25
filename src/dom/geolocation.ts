@@ -1,3 +1,16 @@
+/**
+ * Returns a promise that resolves with an array containing either a GeolocationPositionError or GeolocationCoordinates.
+ *
+ * @return {Promise<[GeolocationPositionError | null, GeolocationCoordinates | null]>} A Promise that resolves with an array containing either a GeolocationPositionError or GeolocationCoordinates.
+ *
+ * @example
+ * ```
+ * const [error, coords] = await getGeolocation();
+ * if (error) // handle error
+ * console.log(coords.latitude, coords.longitude)
+ * ```
+ */
+
 export const getGeolocation = (): Promise<
   [GeolocationPositionError | null, GeolocationCoordinates | null]
 > => {

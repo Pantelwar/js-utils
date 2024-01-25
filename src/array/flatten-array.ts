@@ -4,6 +4,11 @@
  *
  * @param {T[]} list - The array to be flattened.
  * @return {T[]} - The flattened array.
+ *
+ * @example
+ * ```
+ * console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]
+ * ```
  */
 
 export function flattenArray<T = unknown>(list: T[]): T[] {

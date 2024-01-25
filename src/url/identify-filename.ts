@@ -3,6 +3,11 @@
  *
  * @param {string} urlString The URL string.
  * @return {string} The extracted filename.
+ *
+ * @example
+ * ```
+ * console.log(identifyFilename('https://example.com/image.jpg')); // 'image.jpg'
+ * ```
  */
 export function identifyFilename(urlString: string): string {
   try {

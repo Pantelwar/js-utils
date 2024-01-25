@@ -1,3 +1,6 @@
+/**
+ * @module String
+ */
 export * from "./capitalize";
 export * from "./convert-listcases";
 export * from "./param-case";

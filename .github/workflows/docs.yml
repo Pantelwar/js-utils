@@ -32,10 +32,10 @@ jobs:
           git checkout --orphan gh-pages
           git rm -rf .
           mv docs/* .
-          git add .
-          git commit -m "Generate and deploy documentation"
           git fetch origin gh-pages
           git rebase origin/gh-pages
+          git add .
+          git commit -m "Generate and deploy documentation"
           git push -f origin gh-pages
 
   deploy_docs:

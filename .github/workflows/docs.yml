@@ -34,7 +34,9 @@ jobs:
           mv docs/* .
           git add .
           git commit -m "Generate and deploy documentation"
-          git push origin gh-pages
+          git fetch origin gh-pages
+          git rebase origin/gh-pages
+          git push -f origin gh-pages
 
   deploy_docs:
     needs: generate_docs

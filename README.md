@@ -6,6 +6,10 @@ This is a general purpose utility package for usage in javascript or typescript 
 
 Kindly check this package before making your own utilities in the project.
 
+## API Reference
+
+Visit [here](https://pantelwar.github.io/js-utils/) for a complete API Reference and details about all the functions with some examples
+
 ## Installation
 
 For yarn users: (recommended)
@@ -18,6 +22,16 @@ For npm users:
 
 ```
 npm install @pantelwar/js-utils
+```
+
+## Usage
+
+The API is pretty straightforward to use, just directly import the utility function you want and call it straight from your javascript (or typescript) file. Please check out the full API Reference for all functions.
+
+```ts
+import { paramCase } from "@pantelwar/js-utils";
+
+console.log(paramCase("Privacy Policy")); // "privacy-policy"
 ```
 
 ## Guidelines

@@ -12,14 +12,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Install dependencies
+   
       - uses: actions/setup-node@v3
         with:
-          node-version: "18"
-        run: |
-          npm i -g yarn
+          node-version: "14"
+
+      - name: Install dependencies
+      - run: |
+          npm install -g yarn
           yarn install
+
 
       - name: Generate documentation
         run: yarn typedoc

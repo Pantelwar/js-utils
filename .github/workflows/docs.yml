@@ -1,0 +1,52 @@
+name: Generate and Deploy Docs
+
+on:
+  push:
+    branches:
+      - feat/typedoc
+
+jobs:
+  generate_docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+        run: |
+          npm i -g yarn
+          yarn install
+
+      - name: Generate documentation
+        run: yarn typedoc
+
+      - name: Commit and push to gh-pages
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git checkout --orphan gh-pages
+          git rm -rf .
+          mv docs/* .
+          git add .
+          git commit -m "Generate and deploy documentation"
+          git push origin gh-pages
+
+  deploy_docs:
+    needs: generate_docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: .

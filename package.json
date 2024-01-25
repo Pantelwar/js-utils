@@ -1,6 +1,6 @@
 {
   "name": "@pantelwar/js-utils",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A utility package for commonly used javascript functions utilized on daily basis in Pantelwar's projects.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

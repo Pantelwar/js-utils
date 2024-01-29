@@ -68,22 +68,16 @@ git remote add upstream https://github.com/pantelwar/js-utils.git
 
 ### 3. Setup the repo
 
-Install the dependencies with yarn (npm isn't supported):
-
-```bash
-yarn
-```
-
 If you do not have yarn, you can install it using the following command
 
 ```bash
 npm install -g yarn
 ```
 
-Run the following command to install husky git hooks.
+Install the dependencies with yarn (npm isn't supported):
 
 ```bash
-yarn prepare
+yarn
 ```
 
 ### 4. Create a topic branch

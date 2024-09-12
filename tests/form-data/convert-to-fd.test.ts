@@ -45,14 +45,8 @@ describe("Convert object to form data", () => {
     const addedG = formData.get("g");
     expect(addedG).toHaveProperty("type", "text/plain");
     expect(addedG).toHaveProperty("size", 4);
-    expect(formData.getAll("h")).toEqual(["1", "2", "3"]);
-    expect(
-      JSON.stringify(
-        formData
-          .getAll("i")
-          .map((val) => (!(val instanceof File) ? JSON.parse(val) : ""))
-      )
-    ).toEqual(JSON.stringify([{ a: 1 }, { b: 2 }]));
+    expect(formData.get("h")).toEqual("[1,2,3]");
+    expect(formData.get("i")).toEqual(JSON.stringify([{ a: 1 }, { b: 2 }]));
     const addedFiles = formData.getAll("j");
     expect(addedFiles).toHaveLength(2);
   });

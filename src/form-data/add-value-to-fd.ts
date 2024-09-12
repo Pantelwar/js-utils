@@ -26,7 +26,7 @@ type Value =
 export function addValueToFD(formData: FormData, key: string, value: Value) {
   if (value === undefined || value === null) {
     return;
-  } else if (Array.isArray(value)) {
+  } else if (Array.isArray(value) && value[0] instanceof Blob) {
     value.forEach((val) => addValueToFD(formData, key, val));
   } else if (value instanceof Blob) {
     formData.append(key, value);

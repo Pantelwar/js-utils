@@ -32,7 +32,7 @@ describe("Add value to form data", () => {
   it("should add an array to form data", () => {
     const formData = new FormData();
     addValueToFD(formData, "key", [1, 2, 3]);
-    expect(formData.getAll("key")).toEqual(["1", "2", "3"]);
+    expect(formData.get("key")).toEqual("[1,2,3]");
   });
 
   it("should add a file to form data", () => {
